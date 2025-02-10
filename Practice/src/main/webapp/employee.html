@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee Salary Slip</title>
+
+<style>
+	body {
+    	display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #f8f8f8;
+        font-family: Arial, sans-serif;
+	}
+
+    form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 500px;
+        max-width: 90%;
+        text-align: left;
+    }
+        
+    .form-group {
+        display: flex;
+        align-items: center;
+    }
+
+	h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        width: 200px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+        width: auto;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px 0px;
+    }
+
+	button:hover {
+        background-color: #0056b3;
+	}
+
+</style>
+
+</head>
+<body>
+
+<form action="salary" method="get">
+	<h1>Employee Salary Slip Form</h1>
+	<div class="form-group">
+		<label for="eName">Employee name: </label>
+		<input type="text" name= "eName" required/>
+	</div>
+	<br/>
+	
+	<div class="form-group">
+		<label for= "eId">Employee Id: </label>
+		<input type="text" name= "eId" required/>
+	</div>
+	<br/>
+	
+	<div class="form-group">
+	<label for= "department">Department: </label>
+	<select name="department">
+  		<option value="HR">HR</option>
+    	<option value="IT">IT</option>
+    	<option value="Sales">Sales</option>
+    	<option value="Finance">Finance</option>
+    	<option value="Marketing">Marketing</option>
+    </select>
+	</div>
+    <br/>
+    
+    <div class="form-group">
+    	<label for= "designation">Designation: </label>
+		<input type="text" name="designation" required/>
+    </div>
+	<br/>
+	
+	<div class="form-group">
+		<label for= "doj">Joining Date: </label>
+		<input type="date" name="doj" required/>
+	</div>
+	<br/>
+	
+	<div class="form-group">
+		<label for= "email">Email: </label>
+		<input type= "email" name= "email" required/>
+	</div>
+	<br/>
+	
+	<div class="form-group">
+		<label for= "phone">Phone: </label>
+		<input type= "text" name="phone" required/>
+	</div>
+	<br/>
+	
+	<div class="form-group">
+		<label for= "basic">Basic Salary: </label>
+		<input type= "number" name= "basic" step= 0.01 required/>
+	</div>
+	<br />
+	
+	<div class="form-group">
+		<label for= "leaves">No. of Leaves: </label>
+		<input type= "number" name= "leaves" min=0 required/>
+	</div>
+	<br />
+	
+	<label>Work Location:   </label>
+	<input type= "radio" name= "location" value= "office" />
+	<label for= "office">Office</label>
+	<input type= "radio" name= "location" value= "remote" />
+	<label for= "remote">Remote</label>
+	<input type= "radio" name= "location" value= "hybrid" />
+	<label for= "hybrid">Hybrid</label>
+	<br />
+	
+	<br />
+	<input type= "checkbox" name= "da" value="mi" />
+	<label for= "mi">Medical Insurance</label>
+	<br />
+	<input type= "checkbox" name= "da" value="pf" />
+	<label for= "pf">PF-Provident Fund</label>
+	<br />
+	<input type= "checkbox" name= "da" value="hra" />
+	<label for= "hra">HRA-House Rental Allowance</label>
+	<br />
+	<input type= "checkbox" name= "da" value="ta" />
+	<label for= "ta">TA-Transport Allowance</label>
+	<br />
+	
+	<button type="submit">Generate Salary Slip</button>
+    
+</form>
+
+</body>
+</html>
